@@ -117,7 +117,7 @@ button:focus-visible {
 .favourite {
   position: fixed;
   bottom: 0;
-  left: 120px;
+  left: 65px;
   padding: 1.5em;
   animation: shake 0.5s linear;
 }

@@ -82,9 +82,7 @@ function App() {
         ) : null}
       </div>
       <div className="mute-control">
-        <button onClick={onClickMute}>
-          {muted ? "Sound off" : "Sound on"}
-        </button>
+        <button onClick={onClickMute}>{muted ? "🔇" : "🔈"}</button>
       </div>
     </>
   );
