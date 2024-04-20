@@ -2,11 +2,10 @@ import "./App.css";
 import ReactPlayer from "react-player";
 import useVideos from "./useVideos";
 import { useSwipeable } from "react-swipeable";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [videos, setVideos, currentVideoIndex, loadNextVideo] = useVideos();
-  console.log("videos: ", videos);
 
   // @TODO
   // put in GH
@@ -84,7 +83,7 @@ function App() {
       </div>
       <div className="mute-control">
         <button onClick={onClickMute}>
-          {muted ? "Sound on" : "Sound off"}
+          {muted ? "Sound off" : "Sound on"}
         </button>
       </div>
     </>
