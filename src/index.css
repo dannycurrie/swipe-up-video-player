@@ -137,3 +137,33 @@ button:focus-visible {
 .loading {
   animation: loading 1s linear infinite;
 }
+
+@keyframes swipe-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+}
+
+.intro-text {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 999;
+  background-color: #213547;
+  padding: 0.5rem;
+  opacity: 0.7;
+  letter-spacing: 0.1rem;
+  animation: swipe-up 3s forwards;
+}

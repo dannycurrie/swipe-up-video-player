@@ -6,18 +6,6 @@ import { useState } from "react";
 
 function App() {
   const [videos, setVideos, currentVideoIndex, loadNextVideo] = useVideos();
-
-  // @TODO
-  // put in GH
-  // deploy to s3
-  // tidy up code
-  // improve styles
-  // test not logged in
-
-  // not doing
-  // keyboard / mouse accessible
-  // tests
-
   const [playing, setPlaying] = useState(true);
 
   const likeCurrentVideo = () => {
@@ -34,6 +22,7 @@ function App() {
       loadNextVideo(currentVideoIndex + 1);
     },
     onTap: () => {
+      // we need to debounce the tap event to distinguish between single and double tap
       clearTimeout(debounceTimeoutId);
 
       const timeoutId = setTimeout(() => {
@@ -63,6 +52,7 @@ function App() {
 
   return (
     <>
+      <div className="intro-text">SWIPE UP FOR MORE ☝️</div>
       <div className="swipe-container" {...handlers} />
       <div className="player-container">
         <ReactPlayer
